@@ -1,0 +1,164 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.landingPage{
+  background-color: rgba(255, 0, 0, 0.5);
+  height: 700px;
+}
+
+.designPage{
+  background-color: rgba(255, 100, 0, 0.5);
+  height: 700px;
+}
+
+.structurePage{
+  background-color: rgba(255, 255, 0, 0.5);
+  height: 700px;
+}
+
+.renderPage{
+  background-color: rgba(0, 255, 100, 0.5);
+  height: 700px;
+}
+
+.lastPage{
+  background-color: rgba(0, 0, 255, 0.5);
+  height: 700px;
+}
+
+nav{
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.p1{
+  background-color: rgba(255, 0, 0, 0.8);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.p2{
+  background-color: rgba(255, 100, 0, 0.8);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.p3{
+  background-color: rgba(0, 255, 100, 0.8);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.p4{
+  background-color: rgba(255, 255, 0, 0.8);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.p5{
+  background-color: rgba(0, 0, 255, 0.8);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.scale100{
+  transform: scale(1.0);
+  margin: 10px;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.scale150{
+  transform: scale(1.5);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.landingImg{
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  -skrollr-animation-name: landingPageAnimation;
+}
+
+h1{
+  font-size: 80px;
+  font-weight:lighter;
+  position: absolute;
+  color: rgb(255, 255, 255);
+}
+
+.e1{
+  top: 200px;
+  left: 10%;
+  -skrollr-animation-name: e1Animation;
+}
+
+.e2{
+  top: 280px;
+  left: 10%;
+}
+
+.e3{
+  top: 360px;
+  left: 10%;
+}
+
+.e4{
+  top: 440px;
+  left: 10%;
+}
+
+.epac{
+  border:10px white;
+}
+
+@-skrollr-keyframes landingPageAnimation {
+    0 {
+        opacity: 1;
+        top: 0%
+    }
+
+    200 {
+        opacity: .5;
+        top: -10%;
+    }
+
+    300{
+        opacity: 0;
+    }
+
+}
+
+@-skrollr-keyframes e1Animation {
+    0 {
+        color: rgb(255, 255, 255);
+        opacity: 0.5;
+        left: 100%;
+    }
+
+    200 {
+        color: rgb(255, 90, 0);
+        opacity: 1;
+        left: 10%;
+    }
+
+}
