@@ -1,38 +1,39 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+section{
+  position: relative;
+}
+
 .landingPage{
-  background-color: rgba(255, 0, 0, 0.5);
-  height: 700px;
+
 }
 
 .designPage{
-  background-color: rgba(255, 100, 0, 0.5);
-  height: 700px;
+
 }
 
 .structurePage{
-  background-color: rgba(255, 255, 0, 0.5);
-  height: 700px;
+
 }
 
 .renderPage{
-  background-color: rgba(0, 255, 100, 0.5);
-  height: 700px;
+
 }
 
 .lastPage{
-  background-color: rgba(0, 0, 255, 0.5);
-  height: 700px;
+
 }
 
 nav{
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   right: 20px;
   top: 50%;
   transform: translate(0%, -50%);
@@ -55,7 +56,7 @@ nav{
 }
 
 .p3{
-  background-color: rgba(0, 255, 100, 0.8);
+  background-color: rgba(255, 255, 0, 0.8);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -63,7 +64,7 @@ nav{
 }
 
 .p4{
-  background-color: rgba(255, 255, 0, 0.8);
+  background-color: rgba(0, 255, 100, 0.8);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -84,6 +85,10 @@ nav{
   transition: all 0.5s;
 }
 
+.landingContainter{
+  position: relative;
+}
+
 .scale150{
   transform: scale(1.5);
   margin-top: 15px;
@@ -92,73 +97,197 @@ nav{
   transition: all 0.5s;
 }
 
-.landingImg{
+.placeholder{
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  z-index: -5;
+}
+
+.render1a{
   position: absolute;
   width: 100%;
-  opacity: 1;
-  -skrollr-animation-name: landingPageAnimation;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 1;
+  -skrollr-animation-name: render1aAnimation;
 }
 
-h1{
-  font-size: 80px;
-  font-weight:lighter;
+.render1b{
   position: absolute;
-  color: rgb(255, 255, 255);
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 1;
+  z-index: 2;
+  -skrollr-animation-name: render1bAnimation;
 }
 
-.e1{
-  top: 200px;
-  left: 10%;
-  -skrollr-animation-name: e1Animation;
-}
-
-.e2{
-  top: 280px;
-  left: 10%;
-}
-
-.e3{
-  top: 360px;
-  left: 10%;
-}
-
-.e4{
-  top: 440px;
-  left: 10%;
-}
-
-.epac{
-  border:10px white;
-}
-
-@-skrollr-keyframes landingPageAnimation {
+@-skrollr-keyframes render1bAnimation {
     0 {
         opacity: 1;
-        top: 0%
+        top: 0%;
     }
 
-    200 {
+    300 {
         opacity: .5;
-        top: -10%;
+        top: -20%;
     }
 
-    300{
+    1000{
         opacity: 0;
     }
 
 }
 
-@-skrollr-keyframes e1Animation {
+@-skrollr-keyframes render1aAnimation {
     0 {
-        color: rgb(255, 255, 255);
-        opacity: 0.5;
-        left: 100%;
+        opacity: .5;
+        top: 0%;
     }
 
-    200 {
-        color: rgb(255, 90, 0);
+    300 {
+        opacity: .7;
+        top: -20%;
+    }
+
+    1000{
         opacity: 1;
-        left: 10%;
+    }
+
+
+    1400{
+        opacity: 0;
+    }
+
+}
+
+h1{
+  font-size: 30px;
+  font-weight: 100;
+  position: absolute;
+  color: rgba(255, 255, 255, 1);
+  z-index: 3;
+}
+
+.e1{
+  -skrollr-animation-name: e1Animation;
+}
+
+.e2{
+  -skrollr-animation-name: e2Animation;
+}
+
+.e3{
+  -skrollr-animation-name: e3Animation;
+}
+
+.e4{
+  -skrollr-animation-name: e4Animation;
+}
+
+
+
+@-skrollr-keyframes e1Animation {
+
+}
+
+@-skrollr-keyframes e2Animation {
+
+}
+
+@-skrollr-keyframes e3Animation {
+
+}
+
+@-skrollr-keyframes e4Animation {
+
+}
+
+.title{
+  font-size: 80px;
+  font-weight: normal;
+  border-color: rgba(255, 255, 255, 1);
+  border-width: 10px;
+  border-style: solid;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inspiration{
+  -skrollr-animation-name: inspirationAnimation;
+}
+
+.canyon{
+  -skrollr-animation-name: canyonAnimation;
+}
+
+.landing1{
+  width: 120%;
+  z-index: 1;
+  -skrollr-animation-name: landing1Animation;
+}
+
+.landing2{
+  width: 120%;
+  -skrollr-animation-name: landing2Animation;
+}
+
+@-skrollr-keyframes landing1Animation {
+    1100 {
+        opacity: 0.5;
+        margin-left: 0px;
+    }
+
+    2000 {
+        opacity: 1;
+        margin-left: -150px;
+    }
+
+}
+
+@-skrollr-keyframes landing2Animation {
+    2000 {
+        opacity: 0.5;
+        margin-left: -150px;
+    }
+
+    2800 {
+        opacity: 1;
+        margin-left: 0px;
+    }
+
+}
+
+@-skrollr-keyframes inspirationAnimation {
+    1100 {
+        opacity: 0.8;
+        top: 50px;
+        right: 200px;
+    }
+
+    2000 {
+        opacity: 1;
+        top: 600px;
+        right: 500px;
+    }
+
+}
+
+@-skrollr-keyframes canyonAnimation {
+    2400 {
+        opacity: 0.8;
+        top: 1200px;
+        left: 100px;
+    }
+
+    2800 {
+        opacity: 1;
+        top: 1800px;
+        left: 300px;
     }
 
 }
