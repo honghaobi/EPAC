@@ -1,6 +1,6 @@
 (function(){
   var s = skrollr.init();
-  
+
   //nav animation & function
   $('nav').on('mouseenter', 'div', function(event) {
     $(this).addClass('scale150');
@@ -40,6 +40,17 @@
     $('html,body').animate({
       scrollTop: $('.lastPage').offset().top
       },'slow');
+  });
+
+  //location scroll event:
+
+  $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll > 1600) {
+      $('.location').addClass('locationActive');
+    } else{
+      $('.location').removeClass('locationActive');
+    }
   });
 
 
