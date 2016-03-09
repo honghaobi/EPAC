@@ -1,0 +1,63 @@
+.container {
+  width: 90%;
+  height: 100%;
+  padding: 20px 5%;
+  text-align: center;
+}
+
+/* Parallax Flat Shadow */
+
+.grid-container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  height: 900px;
+  padding: 20px;
+  margin: 10px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.shadow-box {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 220px;
+  height: 220px;
+}
+
+.shadow-box .content {
+	position: relative;
+	z-index: 1;
+	width: inherit;
+	height: inherit;
+	background-color: white;
+}
+
+.shadow-box .shadows {
+	opacity: 0.3;
+}
+
+.shadow-box .shadow {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  height: 800%;
+  background-color:rgba(220, 220, 220, 1);
+}
+
+.shadow-box .shadow.top {
+  right: 0;
+  top: 0;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.shadow-box .shadow.bottom {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  right: 0;
+  top: 100%;
+}

@@ -196,7 +196,7 @@ nav{
 
 .divider2{
   width: 100%;
-  height: 50px;
+  height: 10px;
   background-color: rgba(255, 100, 0, 1);
   margin-top: -5px;
   z-index: 5;
@@ -398,25 +398,29 @@ h1{
 }
 
 .divider3{
+  position: relative;
   width: 100%;
-  height: 800px;
-  background-color: rgba(255, 255, 255, 1);
+  height: 10px;
+  background-color: rgba(255, 100, 0, 1);
   margin-top: -5px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .site{
   color: rgba(255, 100, 0, 1);
   border-color: rgba(255, 100, 0, 1);
-  top: 50px;
-  -skrollr-animation-name: siteAnimation;
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 60px;
+  border-width: 5px;
 }
 
 .ls{
-  width: 300px;
-  margin-top: 200px;
-  margin-left: 50px;
-  margin-right: 50px;
+  width: 400px;
+  margin-top: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1;
 }
 
 .light-study{
@@ -427,34 +431,20 @@ h1{
 
 .ls-label{
   display: inline-block;
-  margin-left: 110px;
-  margin-right: 110px;
+  margin-left: 130px;
+  margin-right: 130px;
   color: rgba(255, 100, 0, 1);
-
-}
-
-@-skrollr-keyframes siteAnimation {
-    3900 {
-        opacity: 0.8;
-        left: 70%;
-    }
-
-    4400 {
-        opacity: 1;
-        left: 15%;
-    }
-
 }
 
 @-skrollr-keyframes lightStudyAnimation {
     4200 {
         opacity: 0.8;
-        left: 0%;
+        left: -5%;
     }
 
     5000 {
         opacity: 1;
-        left: 10%;
+        left: 2%;
     }
 
 }
