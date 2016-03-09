@@ -1,10 +1,31 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body{
+  min-width: 1440px;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }
 
 section{
@@ -181,13 +202,6 @@ nav{
   z-index: 5;
 }
 
-.divider3{
-  width: 100%;
-  height: 800px;
-  background-color: rgba(255, 255, 200, 1);
-  margin-top: -5px;
-  z-index: 1;
-}
 
 .location{
   color: rgba(255, 255, 255, 1);
@@ -379,6 +393,68 @@ h1{
         opacity: 1;
         top: 1900px;
         left: 250px;
+    }
+
+}
+
+.divider3{
+  width: 100%;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: -5px;
+  z-index: 0;
+}
+
+.site{
+  color: rgba(255, 100, 0, 1);
+  border-color: rgba(255, 100, 0, 1);
+  top: 50px;
+  -skrollr-animation-name: siteAnimation;
+}
+
+.ls{
+  width: 300px;
+  margin-top: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.light-study{
+  position: absolute;
+  top: 200px;
+  -skrollr-animation-name: lightStudyAnimation;
+}
+
+.ls-label{
+  display: inline-block;
+  margin-left: 110px;
+  margin-right: 110px;
+  color: rgba(255, 100, 0, 1);
+
+}
+
+@-skrollr-keyframes siteAnimation {
+    3900 {
+        opacity: 0.8;
+        left: 70%;
+    }
+
+    4400 {
+        opacity: 1;
+        left: 15%;
+    }
+
+}
+
+@-skrollr-keyframes lightStudyAnimation {
+    4200 {
+        opacity: 0.8;
+        left: 0%;
+    }
+
+    5000 {
+        opacity: 1;
+        left: 10%;
     }
 
 }
