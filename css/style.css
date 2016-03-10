@@ -284,6 +284,10 @@ h1{
   -skrollr-animation-name: landing2Animation;
 }
 
+.logo{
+  -skrollr-animation-name: logoAnimation;
+}
+
 @-skrollr-keyframes introAnimation {
     0 {
         top: 50px;
@@ -305,17 +309,65 @@ h1{
         border-color: rgba(255, 255, 255, 1);
     }
 
-    1400{
+    1200{
         top: 1400px;
     }
 
     1600 {
-
         top: 1800px;
+    }
+
+    1800 {
+        top: 1800px;
+    }
+
+    2100 {
+        top: 1800px;
+        opacity: 0;
+    }
+
+}
+
+@-skrollr-keyframes logoAnimation {
+    0 {
+        opacity: 0;
+    }
+
+    1850 {
+        opacity: 0;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        line-height: .95;
+        letter-spacing: 4px;
+        font-size: 30px;
+        width: 54px;
+        height: 61px;
+        padding: 0px 0px 0px 6px;
+        color: rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 1);
+        border-width: 3.5px;
+        border-style: none none solid solid;
+        z-index: 5;
+    }
+
+    2000 {
+        opacity: .6;
+        color: rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 1);
+    }
+
+    2500{
+      color: rgba(255, 100, 0, 1);
+      border-color: rgba(255, 100, 0, 1);
+    }
+
+    9000 {
 
     }
 
 }
+
 
 @-skrollr-keyframes landing1Animation {
     1600 {
@@ -431,8 +483,9 @@ h1{
 
 .ls-label{
   display: inline-block;
-  margin-left: 130px;
-  margin-right: 130px;
+  font-weight: 100;
+  margin-left: 135px;
+  margin-right: 135px;
   color: rgba(255, 100, 0, 1);
 }
 
@@ -471,8 +524,82 @@ h1{
   z-index: 1;
 }
 
-.drawing{
-  width: 50%;
+.drawing-button{
   position: absolute;
+  background-color: rgba(255, 100, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  font-weight: 100;
+  padding: 10px;
+  right:10%;
+  cursor: pointer;
+  z-index: 2;
+}
 
+.button-bg{
+  background-color: rgba(200, 200, 200, 0.5);
+  position: absolute;
+  height: 1007px;
+  width: 432px;
+  right: 0px;
+}
+
+.trees-b{
+  top: 160px;
+}
+
+.site-building-b{
+  top: 240px;
+}
+
+.top-b{
+  top: 320px;
+}
+
+.plan2-b{
+  top: 400px;
+}
+
+.plan1-b{
+  top: 480px;
+}
+
+.elevation-b{
+  top: 880px;
+}
+
+.section-b{
+  top: 965px;
+}
+
+.plan1{
+}
+
+.plan2{
+}
+
+.top{
+}
+
+.site{
+}
+
+.trees{
+}
+
+.elevation{
+}
+
+.section{
+}
+
+
+.selected-button{
+  background-color: rgba(32, 152, 209, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.drawing{
+  width: 70%;
+  position: absolute;
 }

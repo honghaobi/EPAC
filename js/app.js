@@ -74,37 +74,78 @@
   init();
 
   //toggle drawings
+  $('.plan2').fadeOut('slow');
+  $('.top-view').fadeOut('slow');
 
   $('.plan2-b').on('click', function(event) {
-    $('.plan2').toggleClass('hide');
+    if ($('.plan2:visible').length === 0) {
+      $('.plan2-b').toggleClass('selected-button');
+      $('.plan1-b').removeClass('selected-button');
+      $('.top-b').removeClass('selected-button');
+      $('.plan2').fadeIn('slow');
+      $('.plan1').fadeOut('slow');
+      $('.top-view').fadeOut('slow');
+    }
   });
 
   $('.plan1-b').on('click', function(event) {
-    $('.plan1').toggleClass('hide');
+    if ($('.plan1:visible').length === 0) {
+      $('.plan1-b').toggleClass('selected-button');
+      $('.plan2-b').removeClass('selected-button');
+      $('.top-b').removeClass('selected-button');
+      $('.plan1').fadeIn('slow');
+      $('.plan2').fadeOut('slow');
+      $('.top-view').fadeOut('slow');
+    }
   });
 
   $('.top-b').on('click', function(event) {
-    if ($('.top:visible').length === 0) {
-      $('.top').fadeIn('slow');
-    }else {
-      $('.top').fadeOut('slow');
-      }
+    if ($('.top-view:visible').length === 0) {
+      $('.top-b').toggleClass('selected-button');
+      $('.plan2-b').removeClass('selected-button');
+      $('.plan1-b').removeClass('selected-button');
+      $('.top-view').fadeIn('slow');
+      $('.plan1').fadeOut('slow');
+      $('.plan2').fadeOut('slow');
+    }
   });
 
-  $('.site-b').on('click', function(event) {
-    $('.site-building').toggleClass('hide');
+  $('.site-building-b').on('click', function(event) {
+    $('.site-building-b').toggleClass('selected-button');
+    if ($('.site-building:visible').length === 0) {
+      $('.site-building').fadeIn('slow');
+    } else {
+      $('.site-building').fadeOut('slow');
+    }
   });
 
   $('.trees-b').on('click', function(event) {
-    $('.trees').toggleClass('hide');
+    $('.trees-b').toggleClass('selected-button');
+    if ($('.trees:visible').length === 0) {
+      $('.trees').fadeIn('slow');
+    } else {
+      $('.trees').fadeOut('slow');
+    }
   });
 
   $('.section-b').on('click', function(event) {
-    $('.section').toggleClass('hide');
+    $('.elevation-b').toggleClass('selected-button');
+    $('.section-b').toggleClass('selected-button');
+    if ($('.elevation:visible').length === 0) {
+      $('.elevation').fadeIn('slow');
+    } else {
+      $('.elevation').fadeOut('slow');
+    }
   });
 
   $('.elevation-b').on('click', function(event) {
-    $('.elevation').toggleClass('hide');
+    $('.elevation-b').toggleClass('selected-button');
+    $('.section-b').toggleClass('selected-button');
+    if ($('.elevation:visible').length === 0) {
+      $('.elevation').fadeIn('slow');
+    } else {
+      $('.elevation').fadeOut('slow');
+    }
   });
 
 })();
