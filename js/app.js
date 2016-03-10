@@ -98,7 +98,7 @@
           imagePath:'img/site-renders/', // path of the image assets
           ext: '.jpg', // extention for the assets
           height: 400,
-          width: 600,
+          width: 500,
           navigation: true,
           disableSpin: true // Default false
       });

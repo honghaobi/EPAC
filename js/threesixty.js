@@ -467,6 +467,31 @@
      *
      * @params {Object} [event]
      */
+     var scrollPos;
+
+     $(window).scroll(function (event) {
+       scrollPos = $(window).scrollTop();
+       if (scrollPos > 6000 && scrollPos < 7000) {
+         base.scrollPointer();
+       }
+     });
+
+     var scrollPosObj = {};
+
+     base.scrollPointer = function (event){
+
+        scrollPosObj.scrollEndPosX = scrollPos;
+        scrollPosObj.scrollDistance = scrollPosObj.scrollEndPosX - scrollPosObj.scrollStartPosX;
+
+        AppConfig.endFrame = AppConfig.currentFrame + Math.ceil( (scrollPosObj.scrollDistance));
+
+        console.log('end ' + AppConfig.endFrame );
+        console.log('cur ' + AppConfig.currentFrame );
+        base.refresh();
+        scrollPosObj.scrollStartPosX = scrollPos;
+
+    };
+
     base.trackPointer = function (event) {
       if (AppConfig.ready && AppConfig.dragging) {
         AppConfig.pointerEndPosX = base.getPointerEvent(event).pageX;
@@ -699,7 +724,7 @@
        * @cfg {Number} speedMultiplier
        * This property controls the sensitivity for the 360 slider
        */
-      speedMultiplier: 7,
+      speedMultiplier: 1,
       /**
        * @cfg {Number} totalFrames
        * Set total number for frames used in the 360 rotation
