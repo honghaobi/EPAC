@@ -472,25 +472,25 @@
      $(window).scroll(function (event) {
        scrollPos = $(window).scrollTop();
        if (scrollPos > 6000 && scrollPos < 7000) {
-         base.scrollPointer();
+        //  base.scrollPointer();
        }
      });
 
      var scrollPosObj = {};
 
-     base.scrollPointer = function (event){
-
-        scrollPosObj.scrollEndPosX = scrollPos;
-        scrollPosObj.scrollDistance = scrollPosObj.scrollEndPosX - scrollPosObj.scrollStartPosX;
-
-        AppConfig.endFrame = AppConfig.currentFrame + Math.ceil( (scrollPosObj.scrollDistance));
-
-        console.log('end ' + AppConfig.endFrame );
-        console.log('cur ' + AppConfig.currentFrame );
-        base.refresh();
-        scrollPosObj.scrollStartPosX = scrollPos;
-
-    };
+    //  base.scrollPointer = function (event){
+    //
+    //     scrollPosObj.scrollEndPosX = scrollPos;
+    //     scrollPosObj.scrollDistance = scrollPosObj.scrollEndPosX - scrollPosObj.scrollStartPosX;
+    //
+    //     AppConfig.endFrame = AppConfig.currentFrame + Math.ceil( (scrollPosObj.scrollDistance));
+    //
+    //     console.log('end ' + AppConfig.endFrame );
+    //     console.log('cur ' + AppConfig.currentFrame );
+    //     base.refresh();
+    //     scrollPosObj.scrollStartPosX = scrollPos;
+    //
+    // };
 
     base.trackPointer = function (event) {
       if (AppConfig.ready && AppConfig.dragging) {

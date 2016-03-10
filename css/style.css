@@ -524,6 +524,113 @@ h1{
   width: 100%;
 }
 
+.street{
+  position: absolute;
+  font-weight: 800;
+  font-size: 120px;
+  color: rgba(255, 100, 0, 0.5);
+  z-index: 3;
+}
+
+.thirteen{
+  -skrollr-animation-name: thirteenAnimation;
+}
+
+.twelve{
+  -skrollr-animation-name: twelveAnimation;
+}
+
+.pine{
+  color:rgba(255, 255, 255, 0.9);
+  transform: rotate(270deg);
+  -skrollr-animation-name: pineAnimation;
+}
+
+.olive{
+  color:rgba(255, 255, 255, 0.9);
+  transform: rotate(270deg);
+  -skrollr-animation-name: oliveAnimation;
+}
+
+@-skrollr-keyframes thirteenAnimation {
+    4700 {
+        top: 1180px;
+        left: -300px;
+    }
+
+    6700 {
+        top: 1180px;
+        left: 1500px;
+    }
+
+}
+
+@-skrollr-keyframes twelveAnimation {
+    5300 {
+        top: 1850px;
+        right: -300px;
+    }
+
+    7300 {
+        top: 1850px;
+        right: 1500px;
+    }
+
+}
+
+@-skrollr-keyframes oliveAnimation {
+    5200{
+        opacity: 0;
+    }
+
+    5300 {
+        opacity: 1;
+        top: 480px;
+        left: 55px;
+    }
+
+    6300 {
+        opacity: 1;
+        top: 2500px;
+        left: 55px;
+    }
+
+    6400 {
+        opacity: 0;
+    }
+
+}
+
+@-skrollr-keyframes pineAnimation {
+  4800{
+      opacity: 0;
+  }
+
+  4900 {
+      top: 480px;
+      right: 0px;
+  }
+
+  6400 {
+      opacity: 0.8;
+  }
+
+  6500 {
+      opacity: 0;
+      top: 2500px;
+      right: 0px;
+  }
+
+}
+
+.north{
+  position: absolute;
+  width: 50px;
+  z-index: 3;
+}
+
+
+
 .divider4{
   position: relative;
   width: 100%;
