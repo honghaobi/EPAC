@@ -183,35 +183,58 @@
 
   $('.button-one').on('click', function(event) {
     $('.render-pop-one').show();
+    $('.render-pop-img-one').addClass('animated zoomIn').show();
+    $('.render-pop-img-one').removeClass('zoomOut');
   });
 
   $('.render-pop-one').on('click', function(event) {
-    $('.render-pop-one').hide();
+    $('.render-pop-img-one').addClass('animated zoomOut');
+    $('.render-pop-img-one').removeClass('zoomIn');
+    window.setTimeout(function(){
+      $('.render-pop-one').hide();
+    },500);
   });
 
   $('.button-two').on('click', function(event) {
     $('.render-pop-two').show();
+    $('.render-pop-img-two').addClass('animated zoomIn').show();
+    $('.render-pop-img-two').removeClass('zoomOut');
   });
 
   $('.render-pop-two').on('click', function(event) {
-    $('.render-pop-two').hide();
+    $('.render-pop-img-two').addClass('animated zoomOut');
+    $('.render-pop-img-two').removeClass('zoomIn');
+    window.setTimeout(function(){
+      $('.render-pop-two').hide();
+    },500);
   });
 
   $('.button-three').on('click', function(event) {
     $('.render-pop-three').show();
+    $('.render-pop-img-three').addClass('animated zoomIn').show();
+    $('.render-pop-img-three').removeClass('zoomOut');
   });
 
   $('.render-pop-three').on('click', function(event) {
-    $('.render-pop-three').hide();
+    $('.render-pop-img-three').addClass('animated zoomOut');
+    $('.render-pop-img-three').removeClass('zoomIn');
+    window.setTimeout(function(){
+      $('.render-pop-three').hide();
+    },500);
   });
 
   $('.button-four').on('click', function(event) {
     $('.render-pop-four').show();
+    $('.render-pop-img-four').addClass('animated zoomIn').show();
+    $('.render-pop-img-four').removeClass('zoomOut');
   });
 
   $('.render-pop-four').on('click', function(event) {
-    $('.render-pop-four').hide();
+    $('.render-pop-img-four').addClass('animated zoomOut');
+    $('.render-pop-img-four').removeClass('zoomIn');
+    window.setTimeout(function(){
+      $('.render-pop-four').hide();
+    },500);
   });
-
 
 })();

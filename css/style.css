@@ -669,17 +669,54 @@ h1{
   width: 70%;
   position: absolute;
 }
-.render-pop-img{
+
+.render-pop-img-one{
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-style: solid;
+  border-color: rgba(255, 100, 0, 0.8);
+  border-width: 2px;
+}
+
+.render-pop-img-two{
+  width: 55%;
+  margin-left: 22.5%;
+  margin-right: 22.5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-style: solid;
+  border-color: rgba(255, 100, 0, 0.8);
+  border-width: 2px;
+}
+
+.render-pop-img-three{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  border-style: solid;
+  border-color: rgba(255, 100, 0, 0.8);
+  border-width: 2px;
+}
+
+.render-pop-img-four{
+  width: 55%;
+  margin-left: 22.5%;
+  margin-right: 22.5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-style: solid;
+  border-color: rgba(255, 100, 0, 0.8);
+  border-width: 2px;
 }
 
 .render-pop-one, .render-pop-two, .render-pop-three, .render-pop-four {
   display: none;
-  background-color: rgba(120, 120, 120, 0.9);
+  background-color: rgba(20, 20, 20, 0.9);
   position: fixed;
   top: 0px;
   left: 0px;
