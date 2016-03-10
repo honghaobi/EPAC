@@ -12,6 +12,12 @@
     $(this).addClass('scale100');
   });
 
+  $('.logo').on('click', function(event) {
+    $('html,body').animate({
+      scrollTop: $('body').offset().top
+    },'slow');
+  });
+
   $('.p1').on('click', function(event) {
     $('html,body').animate({
       scrollTop: $('.landingPage').offset().top
@@ -42,6 +48,33 @@
       },'slow');
   });
 
+  //light-study label animation:
+
+  $('.dec').on('mouseenter', function(event) {
+    $('.ls-label-dec').addClass('ls-label-selected');
+  });
+
+  $('.dec').on('mouseout', function(event) {
+    $('.ls-label-dec').removeClass('ls-label-selected');
+  });
+
+  $('.sept').on('mouseenter', function(event) {
+    $('.ls-label-sept').addClass('ls-label-selected');
+  });
+
+  $('.sept').on('mouseout', function(event) {
+    $('.ls-label-sept').removeClass('ls-label-selected');
+  });
+
+  $('.jun').on('mouseenter', function(event) {
+    $('.ls-label-jun').addClass('ls-label-selected');
+  });
+
+  $('.jun').on('mouseout', function(event) {
+    $('.ls-label-jun').removeClass('ls-label-selected');
+  });
+
+
   //location scroll event:
 
   $(window).scroll(function (event) {
@@ -57,15 +90,15 @@
 
   function init(){
       product1 = $('.product1').ThreeSixty({
-          totalFrames: 10, // Total no. of image you have for 360 slider
-          endFrame: 10, // end frame for the auto spin animation
+          totalFrames: 62, // Total no. of image you have for 360 slider
+          endFrame: 62, // end frame for the auto spin animation
           currentFrame: 1, // This the start frame for auto spin
           imgList: '.threesixty_images', // selector for image list
           progress: '.spinner', // selector to show the loading progress
-          imagePath:'img/site', // path of the image assets
-          ext: '.png', // extention for the assets
-          height: 900,
-          width: 800,
+          imagePath:'img/site-renders/', // path of the image assets
+          ext: '.jpg', // extention for the assets
+          height: 400,
+          width: 600,
           navigation: true,
           disableSpin: true // Default false
       });
@@ -147,5 +180,38 @@
       $('.elevation').fadeOut('slow');
     }
   });
+
+  $('.button-one').on('click', function(event) {
+    $('.render-pop-one').show();
+  });
+
+  $('.render-pop-one').on('click', function(event) {
+    $('.render-pop-one').hide();
+  });
+
+  $('.button-two').on('click', function(event) {
+    $('.render-pop-two').show();
+  });
+
+  $('.render-pop-two').on('click', function(event) {
+    $('.render-pop-two').hide();
+  });
+
+  $('.button-three').on('click', function(event) {
+    $('.render-pop-three').show();
+  });
+
+  $('.render-pop-three').on('click', function(event) {
+    $('.render-pop-three').hide();
+  });
+
+  $('.button-four').on('click', function(event) {
+    $('.render-pop-four').show();
+  });
+
+  $('.render-pop-four').on('click', function(event) {
+    $('.render-pop-four').hide();
+  });
+
 
 })();

@@ -285,7 +285,17 @@ h1{
 }
 
 .logo{
+  opacity: .6;
+  transform: scale(1);
+  transition: all 1s;
   -skrollr-animation-name: logoAnimation;
+}
+
+.logo:hover{
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
 @-skrollr-keyframes introAnimation {
@@ -294,7 +304,7 @@ h1{
         left: 100px;
         font-size: 50px;
         border-width: 6px;
-        opacity: 0.8;
+        opacity: 1;
         color: rgba(255, 100, 0, 1);
         border-color: rgba(255, 100, 0, 1);
     }
@@ -352,7 +362,7 @@ h1{
     }
 
     2000 {
-        opacity: .6;
+        opacity: .8;
         color: rgba(255, 255, 255, 1);
         border-color: rgba(255, 255, 255, 1);
     }
@@ -486,7 +496,15 @@ h1{
   font-weight: 100;
   margin-left: 135px;
   margin-right: 135px;
+  padding: 5px;
+  color: rgba(210, 210, 210, 1);
+  transform: scale(1);
+  transition: all .3s;
+}
+
+.ls-label-selected{
   color: rgba(255, 100, 0, 1);
+  transition: all .3s;
 }
 
 @-skrollr-keyframes lightStudyAnimation {
@@ -542,6 +560,54 @@ h1{
   height: 1007px;
   width: 432px;
   right: 0px;
+}
+
+.button-one{
+  position: absolute;
+  top: 570px;
+  left: 600px;
+  background-color: rgba(255, 100, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.button-two{
+  position: absolute;
+  top: 436px;
+  left: 350px;
+  background-color: rgba(255, 100, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.button-three{
+  position: absolute;
+  top: 460px;
+  left: 500px;
+  background-color: rgba(255, 100, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.button-four{
+  position: absolute;
+  top: 630px;
+  left: 750px;
+  background-color: rgba(255, 100, 0, 0.8);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 4;
 }
 
 .trees-b{
@@ -602,4 +668,22 @@ h1{
 .drawing{
   width: 70%;
   position: absolute;
+}
+.render-pop-img{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.render-pop-one, .render-pop-two, .render-pop-three, .render-pop-four {
+  display: none;
+  background-color: rgba(120, 120, 120, 0.9);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
