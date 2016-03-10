@@ -53,12 +53,9 @@
     }
   });
 
-
-
   //site render:
 
   function init(){
-      console.log("working");
       product1 = $('.product1').ThreeSixty({
           totalFrames: 10, // Total no. of image you have for 360 slider
           endFrame: 10, // end frame for the auto spin animation
@@ -68,12 +65,46 @@
           imagePath:'img/site', // path of the image assets
           ext: '.png', // extention for the assets
           height: 900,
-          width: 1440,
+          width: 800,
           navigation: true,
           disableSpin: true // Default false
       });
   }
 
   init();
+
+  //toggle drawings
+
+  $('.plan2-b').on('click', function(event) {
+    $('.plan2').toggleClass('hide');
+  });
+
+  $('.plan1-b').on('click', function(event) {
+    $('.plan1').toggleClass('hide');
+  });
+
+  $('.top-b').on('click', function(event) {
+    if ($('.top:visible').length === 0) {
+      $('.top').fadeIn('slow');
+    }else {
+      $('.top').fadeOut('slow');
+      }
+  });
+
+  $('.site-b').on('click', function(event) {
+    $('.site-building').toggleClass('hide');
+  });
+
+  $('.trees-b').on('click', function(event) {
+    $('.trees').toggleClass('hide');
+  });
+
+  $('.section-b').on('click', function(event) {
+    $('.section').toggleClass('hide');
+  });
+
+  $('.elevation-b').on('click', function(event) {
+    $('.elevation').toggleClass('hide');
+  });
 
 })();
