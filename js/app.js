@@ -20,32 +20,32 @@
 
   $('.p1').on('click', function(event) {
     $('html,body').animate({
-      scrollTop: $('.landingPage').offset().top
-      },'slow');
+      scrollTop: '949px'
+    },'slow');
   });
 
   $('.p2').on('click', function(event) {
     $('html,body').animate({
-      scrollTop: $('.designPage').offset().top
-      },'slow');
+      scrollTop: '2600px'
+    },'slow');
   });
 
   $('.p3').on('click', function(event) {
     $('html,body').animate({
-      scrollTop: $('.structurePage').offset().top
-      },'slow');
+      scrollTop: '4634px'
+    },'slow');
   });
 
   $('.p4').on('click', function(event) {
     $('html,body').animate({
-      scrollTop: $('.renderPage').offset().top
-      },'slow');
+      scrollTop: '6670px'
+    },'slow');
   });
 
   $('.p5').on('click', function(event) {
     $('html,body').animate({
-      scrollTop: $('.lastPage').offset().top
-      },'slow');
+      scrollTop: '7481px'
+    },'slow');
   });
 
   //light-study label animation:
@@ -79,6 +79,7 @@
 
   $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
+    console.log(scroll);
     if (scroll > 1600) {
       $('.location').addClass('locationActive');
     } else{
@@ -236,6 +237,34 @@
     window.setTimeout(function(){
       $('.render-pop-four').hide();
     },500);
+  });
+
+  $('.drawing-button').on('click', function(event) {
+    if ($(event.target).hasClass('plan1-b') || $(event.target).hasClass('plan2-b') || $(event.target).hasClass('top-b') || $(event.target).hasClass('site-building-b') || $(event.target).hasClass('trees-b')){
+
+      $('.buttons-container').animate({
+        top: '80px'
+      },'slow');
+
+      setTimeout(function(){
+        $('html,body').animate({
+          scrollTop: $('.buttons-container').offset().top
+        },'slow');
+      },600);
+
+    } else if ($(event.target).hasClass('section-b') || $(event.target).hasClass('elevation-b')) {
+
+      $('.buttons-container').animate({
+        top: '760px'
+        },'slow');
+
+      setTimeout(function(){
+        $('html,body').animate({
+          scrollTop: '7800px'
+        },'slow');
+      },600);
+
+    }
   });
 
 })();
