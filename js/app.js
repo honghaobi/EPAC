@@ -84,6 +84,7 @@
     } else{
       $('.location').removeClass('locationActive');
     }
+
   });
 
   //site render:
@@ -97,8 +98,8 @@
           progress: '.spinner', // selector to show the loading progress
           imagePath:'img/site-renders/', // path of the image assets
           ext: '.jpg', // extention for the assets
-          height: 400,
-          width: 500,
+          height: 310,
+          width: 650,
           navigation: true,
           disableSpin: true // Default false
       });
