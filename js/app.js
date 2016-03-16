@@ -2,10 +2,25 @@
   var s = skrollr.init();
 
   //creating threesixty ol elements
-
   for (var i = 1; i <= 62; i++) {
     $('.threesixty_images').append('<img class="site-render-' + i +'" src="img/site-renders/' + i + '.jpg" alt="' + i + '" />');
   }
+
+  //window size option
+  if ($(window).width() < 1280) {
+    $('.warning').css({'opacity': '1'});
+  }
+
+  $(window).resize(function() {
+    var viewportWidth = $(window).width();
+    if (viewportWidth < 1280) {
+      $('.warning').addClass('animated fadeInDown');
+      $('.warning').removeClass('fadeOutUp');
+    } else if (viewportWidth > 1280){
+      $('.warning').removeClass('fadeInDown');
+      $('.warning').addClass('fadeOutUp');
+    }
+  });
 
   //nav animation & function
   $('nav').on('mouseenter', 'div', function(event) {
@@ -55,7 +70,6 @@
   });
 
   //light-study label animation:
-
   $('.dec').on('mouseenter', function(event) {
     $('.ls-label-dec').addClass('ls-label-selected');
   });
@@ -82,10 +96,8 @@
 
 
   //location scroll event:
-
   $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
-    console.log(scroll);
     if (scroll > 1600) {
       $('.location').addClass('locationActive');
     } else{
@@ -95,7 +107,6 @@
   });
 
   //site render:
-
   function init(){
       product1 = $('.product1').ThreeSixty({
           totalFrames: 62, // Total no. of image you have for 360 slider
