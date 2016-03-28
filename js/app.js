@@ -1,10 +1,12 @@
 (function(){
 
-  $(window).load(function() {
-    setTimeout(function(){
-      $(".loader").fadeOut("slow");
-    },8000);
-  });
+  var s = skrollr.init();
+
+  // $(window).load(function() {
+  //   setTimeout(function(){
+  //     $(".loader").fadeOut("slow");
+  //   },8000);
+  // });
 
   //window size option
   if ($(window).width() < 1280) {
@@ -22,7 +24,6 @@
     }
   });
 
-  var s = skrollr.init();
 
   //creating threesixty ol elements
   for (var i = 1; i <= 62; i++) {
