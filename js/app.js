@@ -1,10 +1,10 @@
 (function(){
-  var s = skrollr.init();
 
-  //creating threesixty ol elements
-  for (var i = 1; i <= 62; i++) {
-    $('.threesixty_images').append('<img class="site-render-' + i +'" src="img/site-renders/' + i + '.jpg" alt="' + i + '" />');
-  }
+  $(window).load(function() {
+    setTimeout(function(){
+      $(".loader").fadeOut("slow");
+    },8000);
+  });
 
   //window size option
   if ($(window).width() < 1280) {
@@ -21,6 +21,13 @@
       $('.warning').addClass('fadeOutUp');
     }
   });
+
+  var s = skrollr.init();
+
+  //creating threesixty ol elements
+  for (var i = 1; i <= 62; i++) {
+    $('.threesixty_images').append('<img class="site-render-' + i +'" src="img/site-renders/' + i + '.jpg" alt="' + i + '" />');
+  }
 
   //nav animation & function
   $('nav').on('mouseenter', 'div', function(event) {
