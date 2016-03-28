@@ -2,11 +2,11 @@
 
   var s = skrollr.init();
 
-  // $(window).load(function() {
-  //   setTimeout(function(){
-  //     $(".loader").fadeOut("slow");
-  //   },8000);
-  // });
+  $(window).load(function() {
+    setTimeout(function(){
+      $(".loader").fadeOut("slow");
+    },2000);
+  });
 
   //window size option
   if ($(window).width() < 1280) {
